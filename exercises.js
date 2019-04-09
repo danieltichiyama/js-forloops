@@ -198,19 +198,20 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
-var topQuote = "Knowing no bounds";
+// var topQuote = "Knowing no bounds";
 
-function longestWord(str){
-   var arrayOfWords = str.split(" ");
-   var theLongest = str[0];
-   for (i=0;i<arrayOfWords.length;i++){
-      //console.log(arrayOfWords[i]);
-      if (arrayOfWords[i].length>theLongest.length){
-         theLongest=arrayOfWords[i];
-      }
-   }return theLongest;
-}
-console.log(longestWord(topQuote));
+// function longestWord(str){
+//    var arrayOfWords = str.split(" ");
+//    var theLongest = str[0];
+//    for (i=0;i<arrayOfWords.length;i++){
+//       //console.log(arrayOfWords[i]);
+//       if (arrayOfWords[i].length>theLongest.length){
+//          theLongest=arrayOfWords[i];
+//       }
+//    }return theLongest;
+// }
+// console.log(longestWord(topQuote));
+
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
 Write a function named `generateArrayOfStrings` which takes a single argument `storage`. This function will return a new Array with only `String` values inside of it.
@@ -220,8 +221,17 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 
 */
 
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
 
+function generateArrayOfStrings (storage){
+   newArray = [];
+   for (i=0;i<storage.length;i++){
+      newArray.push(storage[i]);
+   }
+   return newArray;
+}
 
+console.log(generateArrayOfStrings(miscStorage));
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
 */
