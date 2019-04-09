@@ -22,15 +22,15 @@ This week's chart buster is: 'Let Me Love You.'
 This week's chart buster is: '24K Magic.'
 */
 
-var topFive = ["Closer", "Starboy", "I Feel It Coming", "Let Me Love You", "24K Magic"];
+// var topFive = ["Closer", "Starboy", "I Feel It Coming", "Let Me Love You", "24K Magic"];
 
-for (i=0;i<topFive.length;i++){
-   console.log("This week's chart buster is: "+topFive[i]);
-}
+// for (i=0;i<topFive.length;i++){
+//    console.log("This week's chart buster is: "+topFive[i]);
+// }
 
 /* 3) Dead Presidents
 Declare a variable named `presidents` and assign it to an array containing the following Presidents: Washington, Adams, Jefferson, Madison and Monroe.
- 
+
 Write a for-loop that will iterate through this array and within the for-loop console.log the following:
 The value at 0 is Washington.
 The value at 1 is Adams.
@@ -48,7 +48,22 @@ This function will iterate through the person parameter and console.log the foll
 "President person was a great leader."
 */
 
+var presidents = ['Washington','Adams',"Jefferson","Madison","Monroe"]
 
+for (i=0;i<presidents.length;i++){
+   console.log('The value at '+ i +' is '+presidents[i])
+}
+
+console.log(presidents.length);
+
+function leaders (person){
+   for (i=0;i<person.length;i++){
+      console.log('President '+person[i]+' was a great leader.')
+   }
+   
+}
+
+leaders(presidents);
 /* 4) Line Number
 Declare a variable named `stringOfNumbers` and assign its value to an empty string. 
 
