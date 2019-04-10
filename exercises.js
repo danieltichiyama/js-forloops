@@ -221,24 +221,50 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 
 */
 
-var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+// var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
 
-function generateArrayOfStrings (storage){
-   newArray = [];
-   for (i=0;i<storage.length;i++){
-      newArray.push(storage[i]);
-   }
-   return newArray;
-}
+// function generateArrayOfStrings (storage){
+//    newArray = [];
+//    for (i=0;i<storage.length;i++){
+//       newArray.push(storage[i]);
+//    }
+//    return newArray;
+// }
 
-console.log(generateArrayOfStrings(miscStorage));
+// console.log(generateArrayOfStrings(miscStorage));
+
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
 */
 
 var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
+//can I put the letters in the string in an array index into their own array, then change the first one and undo the process to get back to the string?
+// function capitalizeFirst (str){
+//    var arrayVersion = str.split(" ");
+//    for (i=0;i<arrayVersion.length;i++){
+//       var newStr=arrayVersion[i].replace(arrayVersion[i][0],arrayVersion[i][0].toUpperCase());
+//       arrayVersion.splice(i,1,newStr);
+//    }
+//    newString = arrayVersion.join(" ");
+//    return newString;
+// }
+// console.log(capitalizeFirst(myWay));
 
+function capitalizeFirst2(str){
+   var newStr = null;
+   
+   for (i=0;i<str.length;i++){
+      if (str[i]===' '||i===0){
+         // console.log(str[i+1]);
+         var newLetter = str[i+1].toUpperCase();
+         newStr.concat (" ",newLetter);
+      }else{
+         newStr.concat("",str[i+1]);  
+      }
+   }return newStr;
+}
 
+console.log(capitalizeFirst2(myWay));
 
 /* 14) Sightseeing
 Write a function that will loop through the multi-dimensional array and console.log the city and landmark on separate lines.
@@ -247,9 +273,13 @@ Note, please use two for loops to complete this problem
   @param Datatype: Array
   */
 
-var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
+// var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
-
+// for (i=0;i<guide.length;i++){
+//    for (i=0;i<guide[i].length;i++){
+//       //do I have to put them into their own arrays and then console.log each of those arrays in a second for loop?
+//    }
+// }
 
 /* 15) Back to School
 Declare a variable named `currentCohort` and set it's value to be this [array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
