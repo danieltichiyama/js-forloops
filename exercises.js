@@ -250,21 +250,21 @@ var myWay = "i've lived a life that's full, i've traveled each and every highway
 // }
 // console.log(capitalizeFirst(myWay));
 
-function capitalizeFirst2(str){
-   var newStr = null;
+// function capitalizeFirst2(str){
+//    var newStr = null;
    
-   for (i=0;i<str.length;i++){
-      if (str[i]===' '||i===0){
-         // console.log(str[i+1]);
-         var newLetter = str[i+1].toUpperCase();
-         newStr.concat (" ",newLetter);
-      }else{
-         newStr.concat("",str[i+1]);  
-      }
-   }return newStr;
-}
+//    for (i=0;i<str.length;i++){
+//       if (str[i]===' '||i===0){
+//          // console.log(str[i+1]);
+//          var newLetter = str[i+1].toUpperCase();
+//          newStr.concat (" ",newLetter);
+//       }else{
+//          newStr.concat("",str[i+1]);  
+//       }
+//    }return newStr;
+// }
 
-console.log(capitalizeFirst2(myWay));
+// console.log(capitalizeFirst2(myWay));
 
 /* 14) Sightseeing
 Write a function that will loop through the multi-dimensional array and console.log the city and landmark on separate lines.
@@ -273,13 +273,19 @@ Note, please use two for loops to complete this problem
   @param Datatype: Array
   */
 
-// var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
+var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
-// for (i=0;i<guide.length;i++){
-//    for (i=0;i<guide[i].length;i++){
-//       //do I have to put them into their own arrays and then console.log each of those arrays in a second for loop?
-//    }
-// }
+function doubleLoop (arr){
+   for (i=0;i<arr.length;i++){
+      for (x=0;x<arr[i].length;x++){
+         console.log(arr[i][x]);
+         }
+      }return;
+   }
+   
+   doubleLoop (guide);
+      //do I have to put them into their own arrays and then console.log each of those arrays in a second for loop?
+
 
 /* 15) Back to School
 Declare a variable named `currentCohort` and set it's value to be this [array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
@@ -292,3 +298,44 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.
 */
 
+var currentCohort = [
+   {
+     name: 'Doug',
+     graduated: false,
+     enrolled: true
+   },
+   {
+     name: 'Pat',
+     graduated: false,
+     enrolled: false
+   },
+   {
+     name: 'Marsha',
+     graduated: false,
+     enrolled: false
+   },
+   {
+     name: 'Moira',
+     graduated: false,
+     enrolled: true
+   },
+   {
+     name: 'Ben',
+     graduated: false,
+     enrolled: true
+   },
+   {
+     name: 'Nigel the Giraffe',
+     graduated: false,
+     enrolled: false
+   },
+   {
+     name: 'Brandon the Shark',
+     graduated: false,
+     enrolled: true
+   }
+ ]
+
+function graduateAndSetNewClass (cohort){
+
+}
