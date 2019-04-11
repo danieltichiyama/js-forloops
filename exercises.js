@@ -237,8 +237,8 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
 */
 
-var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
-//can I put the letters in the string in an array index into their own array, then change the first one and undo the process to get back to the string?
+// var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
+// //can I put the letters in the string in an array index into their own array, then change the first one and undo the process to get back to the string?
 // function capitalizeFirst (str){
 //    var arrayVersion = str.split(" ");
 //    for (i=0;i<arrayVersion.length;i++){
@@ -250,21 +250,22 @@ var myWay = "i've lived a life that's full, i've traveled each and every highway
 // }
 // console.log(capitalizeFirst(myWay));
 
+
 // function capitalizeFirst2(str){
-//    var newStr = null;
-   
+//    var newStr = str[0];
 //    for (i=0;i<str.length;i++){
-//       if (str[i]===' '||i===0){
-//          // console.log(str[i+1]);
+//       if (str[i]===' '){
+//         //  console.log(str[i+1]);
 //          var newLetter = str[i+1].toUpperCase();
-//          newStr.concat (" ",newLetter);
+//          var newStr = str.concat (" ",newLetter);
 //       }else{
-//          newStr.concat("",str[i+1]);  
+//          var newStr = str.concat("",str[i+1]);  
 //       }
 //    }return newStr;
 // }
 
-// console.log(capitalizeFirst2(myWay));
+// capitalizeFirst2(myWay);
+// // console.log(capitalizeFirst2(myWay));
 
 /* 14) Sightseeing
 Write a function that will loop through the multi-dimensional array and console.log the city and landmark on separate lines.
@@ -273,17 +274,17 @@ Note, please use two for loops to complete this problem
   @param Datatype: Array
   */
 
-var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
+// var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
-function doubleLoop (arr){
-   for (i=0;i<arr.length;i++){
-      for (x=0;x<arr[i].length;x++){
-         console.log(arr[i][x]);
-         }
-      }return;
-   }
+// function doubleLoop (arr){
+//    for (i=0;i<arr.length;i++){
+//       for (x=0;x<arr[i].length;x++){
+//          console.log(arr[i][x]);
+//          }
+//       }return;
+//    }
    
-   doubleLoop (guide);
+//    doubleLoop (guide);
       //do I have to put them into their own arrays and then console.log each of those arrays in a second for loop?
 
 
@@ -337,5 +338,13 @@ var currentCohort = [
  ]
 
 function graduateAndSetNewClass (cohort){
-
+  for (i=0;i<cohort.length;i++){
+    if (cohort[i].enrolled==true){
+      cohort[i].graduated = true;
+    }else{
+      cohort[i].enrolled = true;
+    }
+  }return cohort;
 }
+
+console.log(graduateAndSetNewClass(currentCohort));
